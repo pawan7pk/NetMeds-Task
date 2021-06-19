@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/medicine_nav_graph"
+    app:startDestination="@id/medicinesFragment">
+
+    <fragment
+        android:id="@+id/medicinesFragment"
+        android:name="com.pawan.netmedstask.ui.fragments.MedicinesFragment"
+        android:label="MedicinesFragment">
+        <action
+            android:id="@+id/action_medicinesFragment_to_prescriptionPadFragment"
+            app:destination="@id/prescriptionPadFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionPadFragment"
+        android:name="com.pawan.netmedstask.ui.fragments.PrescriptionPadFragment"
+        android:label="PrescriptionFragment">
+        <!--<action
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>-->
+    </fragment>
+
+</navigation>
